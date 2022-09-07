@@ -1,4 +1,4 @@
-from wagtail.contrib.settings.models import BaseSetting
+from wagtail.contrib.settings.models import BaseSiteSetting
 
 from .jsonld import ThingLD
 from .registry import SiteThingLD
@@ -19,7 +19,7 @@ class PageLDMixin(ThingLD):
         })
 
 
-class BaseLDSetting(SiteThingLD, BaseSetting):
+class BaseLDSetting(SiteThingLD, BaseSiteSetting):
     """
     A mix of :class:`~wagtailschemaorg.registry.SiteThingLD` and
     :class:`wagtail.contrib.settings.models.BaseSetting`.
